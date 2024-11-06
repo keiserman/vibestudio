@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/ProjectLayout.astro
 title: Medset
-tag: Development
+description: MedSet specializes in developing automated MDS software that will revolutionize patient billing, instantly increase profits, and ensure audit compliance.
 ---
