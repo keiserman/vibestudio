@@ -1,0 +1,40 @@
+---
+import { getCollection, getEntry } from "astro:content";
+const allProjects = await getCollection("projects");
+---
+
+<div class="grid grid-cols-3 gap-4">
+  {
+    allProjects.map((project) => (
+      <a href={project.slug} class="">
+        <img
+          src=""
+          class="w-full aspect-square pointer-events-none bg-gray-800"
+        />
+      </a>
+    ))
+  }
+</div>
+
+<script>
+  import { gsap } from "gsap";
+
+  const projects = document.querySelectorAll("img");
+  const featuredProjects = Array.from(projects).slice(0, 5);
+
+  document.addEventListener("mousemove", (e) => {
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    featuredProjects.forEach((square, index) => {
+      square.classList.add("absolute");
+      gsap.to(square, {
+        x: mouseX,
+        y: mouseY,
+        delay: index * 0.05,
+        duration: 0.3,
+        ease: "power3.out",
+      });
+    });
+  });
+</script>
