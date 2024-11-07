@@ -17,24 +17,24 @@ const allProjects = await getCollection("projects");
 </div>
 
 <script>
-  import { gsap } from "gsap";
+  // import { gsap } from "gsap";
 
-  const projects = document.querySelectorAll("img");
-  const featuredProjects = Array.from(projects).slice(0, 5);
+  // const projects = document.querySelectorAll("img");
+  // const featuredProjects = Array.from(projects).slice(0, 3);
 
-  document.addEventListener("mousemove", (e) => {
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
+  // document.addEventListener("mousemove", (e) => {
+  //   const mouseX = e.clientX;
+  //   const mouseY = e.clientY;
 
-    featuredProjects.forEach((square, index) => {
-      square.classList.add("absolute");
-      gsap.to(square, {
-        x: mouseX,
-        y: mouseY,
-        delay: index * 0.05,
-        duration: 0.3,
-        ease: "power3.out",
-      });
-    });
-  });
+  //   featuredProjects.forEach((square, index) => {
+  //     square.classList.add("absolute");
+  //     gsap.to(square, {
+  //       x: mouseX,
+  //       y: mouseY,
+  //       delay: index * 0.05,
+  //       duration: 0.3,
+  //       ease: "power3.out",
+  //     });
+  //   });
+  // });
 </script>
