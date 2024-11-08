@@ -5,5 +5,5 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
   veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
   commodo consequat.
 test: test
-image: public/uploads/project1.png
+image: uploads/project1.png
 ---

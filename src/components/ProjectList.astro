@@ -3,13 +3,13 @@ import { getCollection, getEntry } from "astro:content";
 const allProjects = await getCollection("projects");
 ---
 
-<div class="grid grid-cols-3 gap-4">
+<div class="grid md:grid-cols-3 sm:grid-cols-2 gap-4">
   {
     allProjects.map((project) => (
-      <a href={project.slug} class="">
+      <a href={`/projects/${project.slug}`} class="">
         <img
-          src=""
-          class="w-full aspect-square pointer-events-none bg-gray-800"
+          src={project.data.image}
+          class="w-full aspect-[4/5] object-cover pointer-events-none bg-gray-800"
         />
       </a>
     ))

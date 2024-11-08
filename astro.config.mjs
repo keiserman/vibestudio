@@ -14,8 +14,8 @@ export default defineConfig({
           name: "git-gateway",
           branch: "main",
         },
-        media_folder: "public/uploads",
-        public_folder: "public/uploads",
+        media_folder: "/uploads",
+        public_folder: "/uploads",
         collections: [
           {
             name: "projects",
