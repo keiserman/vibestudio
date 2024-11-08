@@ -14,6 +14,8 @@ export default defineConfig({
           name: "git-gateway",
           branch: "main",
         },
+        media_folder: "public/uploads",
+        public_folder: "public/uploads",
         collections: [
           {
             name: "projects",
@@ -24,6 +26,7 @@ export default defineConfig({
             fields: [
               { name: "title", widget: "string", label: "Title" },
               { name: "description", widget: "string", label: "Description" },
+              { name: "image", label: "Image", widget: "image" },
             ],
           },
         ],
